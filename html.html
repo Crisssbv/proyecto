@@ -1,68 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | Lenguajes del desarrollo web</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
-    <h1>Introducción a los lenguajes del desarrollo web</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="html.html">HTML</a></li>
-        <li><a href="css.html">CSS</a></li>
-        <li><a href="javascript.html">JavaScript</a></li>
-        <li><a href="comparacion.html">Comparación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Lenguajes Web</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="html.html">HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="comparacion.html">Comparación</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
+
   <main>
-    <section>
-      <article>
-        <h2>¿Qué es HTML?</h2>
-        <p>
-          <strong>HTML</strong> (HyperText Markup Language) es el lenguaje de marcado estándar
-          para crear la estructura de las páginas web. Define elementos como títulos,
-          párrafos, imágenes, enlaces, tablas y formularios mediante etiquetas.
-        </p>
-        <figure>
-          <img src="imagenes/HTML5_logo_and_wordmark.svg.png" alt="Logo de HTML 5" width="20%">
-          <figcaption>HTML5 introduce nuevas etiquetas semánticas para una mejor estructura.</figcaption>
-        </figure>
+    <!-- Imagen arriba (hero) -->
+    <section class="container my-4">
+      <article class="p-4 p-md-5 bg-light rounded shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
+            <h1 class="display-6 fw-bold mb-2">HTML</h1>
+            <p class="lead mb-3">
+              HTML es el lenguaje de marcado que define la <strong>estructura</strong> y la <strong>semántica</strong>
+              del contenido en la web.
+            </p>
+            <a class="btn btn-primary me-2" href="comparacion.html">Ver comparación</a>
+            <a class="btn btn-outline-secondary" href="contacto.html">Contacto</a>
+          </div>
+          <div class="col-12 col-lg-5 text-center">
+            <img src="imagenes/html5-logo.png" class="img-fluid hero-logo" alt="Logo HTML5">
+          </div>
+        </div>
       </article>
     </section>
-    <section>
-      <article>
-        <h3>Ventajas de HTML</h3>
-        <ul>
-          <li>Es el estándar para estructurar contenido en la web.</li>
-          <li>Es fácil de aprender y utilizar.</li>
-          <li>Compatible con todos los navegadores modernos.</li>
-          <li>Permite integrar otros lenguajes como CSS y JavaScript.</li>
-        </ul>
-      </article>
 
-      <article>
-        <h3>Aplicaciones de HTML</h3>
-        <p>HTML se utiliza, por ejemplo, para:</p>
-        <ol>
-          <li>Crear la estructura básica de sitios web y aplicaciones web.</li>
-          <li>Incrustar imágenes, videos y otros recursos multimedia.</li>
-          <li>Definir formularios de entrada de datos.</li>
-          <li>Conectar páginas mediante enlaces de navegación.</li>
-        </ol>
-      </article>
+    <!-- Contenido con accordion + card -->
+    <section class="container my-4">
+      <div class="row g-4">
+        <!-- Accordion -->
+        <div class="col-12 col-lg-8">
+          <article class="accordion shadow-sm" id="accHTML">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1"
+                  aria-expanded="true" aria-controls="c1">
+                  ¿Qué es HTML?
+                </button>
+              </h2>
+              <div id="c1" class="accordion-collapse collapse show" aria-labelledby="h1" data-bs-parent="#accHTML">
+                <div class="accordion-body">
+                  <p class="mb-0">
+                    <strong>HTML (HyperText Markup Language)</strong> organiza el contenido mediante etiquetas
+                    como títulos, párrafos, listas, enlaces, imágenes, tablas y formularios. También permite
+                    mejorar la accesibilidad usando etiquetas semánticas como <code>&lt;header&gt;</code>,
+                    <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;footer&gt;</code>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2"
+                  aria-expanded="false" aria-controls="c2">
+                  Ventajas de HTML
+                </button>
+              </h2>
+              <div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#accHTML">
+                <div class="accordion-body">
+                  <ul class="mb-0">
+                    <li>Es el estándar para estructurar contenido en la web.</li>
+                    <li>Es fácil de aprender y ampliamente documentado.</li>
+                    <li>Funciona en todos los navegadores modernos.</li>
+                    <li>Permite accesibilidad y buena organización mediante semántica HTML5.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="h3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3"
+                  aria-expanded="false" aria-controls="c3">
+                  Aplicaciones de HTML
+                </button>
+              </h2>
+              <div id="c3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#accHTML">
+                <div class="accordion-body">
+                  <ol class="mb-0">
+                    <li>Crear páginas y sitios web con estructura clara.</li>
+                    <li>Construir formularios para capturar información.</li>
+                    <li>Organizar contenido con secciones y artículos.</li>
+                    <li>Integrar recursos multimedia (imágenes, audio, video).</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card resumen -->
+        <div class="col-12 col-lg-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 card-title">Ejemplo rápido</h2>
+              <p class="card-text">Una estructura típica con HTML5 semántico:</p>
+              <div class="bg-light rounded p-3 border">
+<pre class="mb-0"><code>&lt;header&gt;...&lt;/header&gt;
+&lt;nav&gt;...&lt;/nav&gt;
+&lt;main&gt;...&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+              </div>
+              <a href="index.html" class="btn btn-outline-primary mt-3">Volver al inicio</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>
-    <p>&copy; 2025 – Introducción a los lenguajes del desarrollo web</p>
+
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2026 – Introducción a los lenguajes del desarrollo web</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

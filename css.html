@@ -1,66 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS | Lenguajes del desarrollo web</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-    <h1>Introducción a los lenguajes del desarrollo web</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="html.html">HTML</a></li>
-        <li><a href="css.html">CSS</a></li>
-        <li><a href="javascript.html">JavaScript</a></li>
-        <li><a href="comparacion.html">Comparación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Lenguajes Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+            <li class="nav-item"><a class="nav-link active" href="css.html">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="comparacion.html">Comparación</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
+
   <main>
-    <section>
-      <article>
-        <h2>¿Qué es CSS?</h2>
-        <p><strong>CSS</strong> (Cascading Style Sheets) es el lenguaje utilizado para
-          describir la presentación visual de un documento HTML. Permite definir colores,
-          tipografías, márgenes, tamaños, posiciones y efectos visuales.
-        </p>
-        <figure>
-          <img src="imagenes/CSS-Logo-2011.png" alt="Logo de CSS3" width="40%">
-          <figcaption>CSS3 añade nuevas propiedades para animaciones y efectos avanzados.</figcaption>
-        </figure>
+    <section class="container my-4">
+      <article class="p-4 p-md-5 bg-light rounded shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
+            <h1 class="display-6 fw-bold mb-2">CSS</h1>
+            <p class="lead mb-3">
+              CSS se encarga del <strong>diseño visual</strong>: colores, tipografías, espaciado, layout y responsive.
+            </p>
+            <a class="btn btn-primary me-2" href="comparacion.html">Ver comparación</a>
+            <a class="btn btn-outline-secondary" href="index.html">Volver al inicio</a>
+          </div>
+          <div class="col-12 col-lg-5 text-center">
+            <img src="imagenes/css3-logo.png" class="img-fluid hero-logo" alt="Logo CSS3">
+          </div>
+        </div>
       </article>
     </section>
-    <section>
-      <article>
-        <h3>Ventajas de CSS</h3>
-        <ul>
-          <li>Separa el contenido (HTML) de la presentación (estilo).</li>
-          <li>Permite reutilizar estilos en múltiples páginas.</li>
-          <li>Mejora la accesibilidad y el mantenimiento del sitio.</li>
-          <li>Facilita la adaptación a diferentes tamaños de pantalla (diseño responsivo).</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Aplicaciones de CSS</h3>
-        <p>CSS es clave para:</p>
-        <ol>
-          <li>Diseñar interfaces visualmente atractivas.</li>
-          <li>Crear diseños responsivos para móviles, tabletas y computadoras.</li>
-          <li>Aplicar animaciones y transiciones.</li>
-          <li>Personalizar la apariencia de componentes como menús y formularios.</li>
-        </ol>
-      </article>
+
+    <section class="container my-4">
+      <div class="row g-4">
+        <div class="col-12 col-lg-8">
+          <article class="accordion shadow-sm" id="accCSS">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="css1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cssC1">
+                  ¿Qué es CSS?
+                </button>
+              </h2>
+              <div id="cssC1" class="accordion-collapse collapse show" data-bs-parent="#accCSS">
+                <div class="accordion-body">
+                  <p class="mb-0">
+                    <strong>CSS (Cascading Style Sheets)</strong> define la presentación del HTML.
+                    Permite aplicar estilos a elementos y organizar el diseño (layout) usando técnicas modernas
+                    como flexbox y grid, logrando diseños responsivos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="css2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cssC2">
+                  Ventajas de CSS
+                </button>
+              </h2>
+              <div id="cssC2" class="accordion-collapse collapse" data-bs-parent="#accCSS">
+                <div class="accordion-body">
+                  <ul class="mb-0">
+                    <li>Separa contenido (HTML) de presentación (estilos).</li>
+                    <li>Reutiliza estilos en múltiples páginas.</li>
+                    <li>Facilita el diseño responsive para móviles y tablets.</li>
+                    <li>Mejora la consistencia visual del sitio.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="css3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cssC3">
+                  Aplicaciones de CSS
+                </button>
+              </h2>
+              <div id="cssC3" class="accordion-collapse collapse" data-bs-parent="#accCSS">
+                <div class="accordion-body">
+                  <ol class="mb-0">
+                    <li>Diseño de menús, botones y formularios.</li>
+                    <li>Layouts con Flexbox y CSS Grid.</li>
+                    <li>Animaciones y transiciones (hover).</li>
+                    <li>Adaptación a múltiples tamaños de pantalla.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 card-title">Ejemplo rápido</h2>
+              <p class="card-text">Aplicar tipografía y color:</p>
+              <div class="bg-light rounded p-3 border">
+<pre class="mb-0"><code>body {
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+}</code></pre>
+              </div>
+              <span class="badge text-bg-info mt-3">Componente: Badge</span>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
-<footer>
-    <p>&copy; 2025 – Introducción a los lenguajes del desarrollo web</p>
+
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2026 – Introducción a los lenguajes del desarrollo web</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,70 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript | Lenguajes del desarrollo web</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-    <h1>Introducción a los lenguajes del desarrollo web</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="html.html">HTML</a></li>
-        <li><a href="css.html">CSS</a></li>
-        <li><a href="javascript.html">JavaScript</a></li>
-        <li><a href="comparacion.html">Comparación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">Lenguajes Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+            <li class="nav-item"><a class="nav-link active" href="javascript.html">JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="comparacion.html">Comparación</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section>
-      <article>
-        <h2>¿Qué es JavaScript?</h2>
-        <p>
-          <strong>JavaScript</strong> es un lenguaje de programación que se ejecuta
-          principalmente en el navegador y permite agregar interactividad y lógica a
-          las páginas web. Con JavaScript se pueden responder a eventos, validar
-          formularios, manipular el DOM y comunicarse con servidores.
-        </p>
-        <figure>
-          <img src="imagenes/JavaScript-Logo.png" alt="Logo de JavaScript" width ="20%">
-          <figcaption>JavaScript es esencial para la web interactiva.</figcaption>
-        </figure>
+    <section class="container my-4">
+      <article class="p-4 p-md-5 bg-light rounded shadow-sm">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
+            <h1 class="display-6 fw-bold mb-2">JavaScript</h1>
+            <p class="lead mb-3">
+              JavaScript agrega <strong>interactividad</strong>, lógica y comportamiento a los sitios web.
+            </p>
+            <a class="btn btn-primary me-2" href="comparacion.html">Ver comparación</a>
+            <a class="btn btn-outline-secondary" href="index.html">Volver al inicio</a>
+          </div>
+          <div class="col-12 col-lg-5 text-center">
+            <img src="imagenes/JavaScript-Logo.png" class="img-fluid hero-logo" alt="Logo JavaScript">
+          </div>
+        </div>
       </article>
     </section>
-    <section>
-      <article>
-        <h3>Ventajas de JavaScript</h3>
-        <ul>
-          <li>Permite crear experiencias de usuario dinámicas e interactivas.</li>
-          <li>Se ejecuta en el navegador sin necesidad de instalar software adicional.</li>
-          <li>Cuenta con una gran cantidad de librerías y frameworks.</li>
-          <li>También se puede usar en el servidor (por ejemplo, con Node.js).</li>
-        </ul>
-      </article>
 
-      <article>
-        <h3>Aplicaciones de JavaScript</h3>
-        <p>JavaScript se emplea en:</p>
-        <ol>
-          <li>Validar formularios en el lado del cliente.</li>
-          <li>Crear menús desplegables y efectos interactivos.</li>
-          <li>Desarrollar aplicaciones web de una sola página (SPA).</li>
-          <li>Consumir APIs y mostrar datos actualizados en tiempo real.</li>
-        </ol>
-      </article>
+    <section class="container my-4">
+      <div class="row g-4">
+        <div class="col-12 col-lg-8">
+          <article class="accordion shadow-sm" id="accJS">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="js1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#jsC1">
+                  ¿Qué es JavaScript?
+                </button>
+              </h2>
+              <div id="jsC1" class="accordion-collapse collapse show" data-bs-parent="#accJS">
+                <div class="accordion-body">
+                  <p class="mb-0">
+                    <strong>JavaScript</strong> es un lenguaje de programación que se ejecuta principalmente en el navegador.
+                    Permite manipular el DOM, responder a eventos, validar formularios y consumir APIs para actualizar contenido
+                    sin recargar la página.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="js2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jsC2">
+                  Ventajas de JavaScript
+                </button>
+              </h2>
+              <div id="jsC2" class="accordion-collapse collapse" data-bs-parent="#accJS">
+                <div class="accordion-body">
+                  <ul class="mb-0">
+                    <li>Hace las páginas dinámicas e interactivas.</li>
+                    <li>Permite validar datos del usuario en formularios.</li>
+                    <li>Gran ecosistema de librerías y frameworks.</li>
+                    <li>Puede usarse también en servidor (Node.js).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="js3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jsC3">
+                  Aplicaciones de JavaScript
+                </button>
+              </h2>
+              <div id="jsC3" class="accordion-collapse collapse" data-bs-parent="#accJS">
+                <div class="accordion-body">
+                  <ol class="mb-0">
+                    <li>Validación y mejora de formularios.</li>
+                    <li>Menús desplegables, modales y efectos.</li>
+                    <li>Consumo de APIs y carga dinámica de datos.</li>
+                    <li>Aplicaciones web modernas (SPA).</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 card-title">Ejemplo rápido</h2>
+              <p class="card-text">Mostrar un mensaje al hacer clic:</p>
+              <div class="bg-light rounded p-3 border">
+<pre class="mb-0"><code>document.querySelector("button")
+  .addEventListener("click", () => {
+    alert("Hola desde JavaScript");
+  });</code></pre>
+              </div>
+              <div class="alert alert-info mt-3 mb-0" role="alert">
+                Componente: Alert
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
-<footer>
-    <p>&copy; 2025 – Introducción a los lenguajes del desarrollo web</p>
+
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p class="mb-0">&copy; 2026 – Introducción a los lenguajes del desarrollo web</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
