@@ -167,6 +167,14 @@ input[type="submit"]:hover {
   background-color: #444;
 }
 
+/* Logos dentro de cards: mismo tamaño visual */
+.card-logo {
+  height: 160px;        /* tamaño fijo */
+  width: 100%;
+  object-fit: contain; /* NO se deforma */
+}
+
+
 /* =========================
    FOOTER
    ========================= */
